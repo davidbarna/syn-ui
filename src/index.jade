@@ -2,6 +2,7 @@ html
   head
     link(rel='stylesheet' type='text/css', href='/index.css')
   body
+    syn-app-header()
     script(type='text/javascript', src='/index.bundle.js')
     script(type='text/javascript').
       angular.bootstrap( document.body, [ syn.ui.angular.getModule().name ] )
