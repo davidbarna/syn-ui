@@ -23,7 +23,7 @@ $_user-height: 3.1rem;
     }
   }
 
-  .syn-ui-header_user {
+  .syn-app-header_user {
     margin-top: ( $height - $_user-height ) /2;
     margin-right: $spacing;
   }
@@ -43,7 +43,7 @@ syn-app-header {
     position: relative;
   }
 
-  .syn-ui-header_user {
+  .syn-app-header_user {
     @include clearfix;
     display: none;
     float: right;
@@ -86,7 +86,7 @@ syn-app-header {
   syn-app-header {
     @include syn-app-header-layout( $_height, $_spacing );
 
-    .syn-ui-header_user {
+    .syn-app-header_user {
       display: block;
     }
   }

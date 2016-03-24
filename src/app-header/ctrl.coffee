@@ -1,10 +1,11 @@
+gSession = require( 'syn-auth' ).session.global
+
 ###
  *
 ###
 class AppHeaderCtrl
 
-  gSession = require( 'syn-auth' ).session.global
-  HEADER_USER_CLASS = 'syn-ui-header_user'
+  USER_CLASS: 'syn-app-header_user'
 
   ###
    * @param  {Session} session
@@ -38,7 +39,6 @@ class AppHeaderCtrl
    * @param {function} user.username Returns user's username
   ###
   setUser: ( user ) ->
-
     @toggleUser( !!user )
     return if !user
     @render(
@@ -51,7 +51,7 @@ class AppHeaderCtrl
    * @return {undefined}
   ###
   toggleUser: ( show ) ->
-    @_userElement ?= @elem[0].getElementsByClassName( HEADER_USER_CLASS )[0]
+    @_userElement ?= @elem[0].getElementsByClassName( @USER_CLASS )[0]
     @_userElement.style.display = if show then null else 'none'
     return
 
