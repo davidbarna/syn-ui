@@ -1,0 +1,29 @@
+{
+  "name": "syn-ui",
+  "version": "0.0.0",
+  "description": "User interface elements served as components.",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/soyundev/syn-ui.git"
+  },
+  "author": "David Almeida <davidbarna@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/soyundev/syn-ui/issues"
+  },
+  "homepage": "https://github.com/soyundev/syn-ui#readme",
+  "devDependencies": {
+    "dev-tools": "git://github.com/soyundev/dev-tools.git",
+    "gulp": "3.9.1"
+  },
+  "dependencies": {
+    "angular-bsfy": "1.4.8",
+    "syn-auth": "git@github.com:soyundev/syn-auth.git",
+    "jade": "1.11.0",
+    "jqlite": "0.2.34"
+  }
+}
