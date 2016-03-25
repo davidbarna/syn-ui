@@ -1,8 +1,8 @@
-$_spacing: $spacing;
+$_spacing: $spacing * 1.1;
 $_c-bg: $c-brand;
 $_c-contrast: $c-brand-contrast;
-$_height: 7rem;
-$_height-mobile: 4.5rem;
+$_height: $syn-app-header-height;
+$_height-mobile: $syn-app-header-height--small;
 $_user-height: 3.1rem;
 
 
@@ -31,13 +31,12 @@ $_user-height: 3.1rem;
 
 syn-app-header {
   @include clearfix;
-  @include syn-app-header-layout( $_height-mobile, $_spacing/2 );
+  @include syn-app-header-layout( $_height, $_spacing );
   position: absolute;
   top: 0;
   right: 0;
   left: 0;
   background-color: $_c-bg;
-  font-family: Asap, sans-serif;
 
   logo {
     position: relative;
@@ -45,7 +44,7 @@ syn-app-header {
 
   .syn-app-header_user {
     @include clearfix;
-    display: none;
+    display: block;
     float: right;
     font-size: 1.2rem;
 
@@ -81,13 +80,13 @@ syn-app-header {
   }
 }
 
-// Layout for desktop
-@media ( min-width: 640px ) {
+// Layout for mobile
+@media #{$small-only} {
   syn-app-header {
-    @include syn-app-header-layout( $_height, $_spacing );
+    @include syn-app-header-layout( $_height-mobile, $_spacing/2 );
 
     .syn-app-header_user {
-      display: block;
+      display: none;
     }
   }
 }
