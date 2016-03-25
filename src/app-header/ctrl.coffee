@@ -1,4 +1,5 @@
 gSession = require( 'syn-auth' ).session.global
+$ = require( 'jqlite' )
 
 ###
  *
@@ -16,10 +17,19 @@ class AppHeaderCtrl
     return
 
   ###
+   * When users clicks on user card
+   * @return {undefined}
+  ###
+  _userClickHandler: ->
+    gSession.clear()
+    return
+
+  ###
    * @constructor
    * @param  {DOM Element} @elem
   ###
   constructor: ( @elem ) ->
+    @_userElement = $( @elem[0].getElementsByClassName( @USER_CLASS ) )
     @toggleUser( false )
 
   ###
@@ -28,6 +38,7 @@ class AppHeaderCtrl
   ###
   init: ->
     @setUser( gSession.get()?.user() )
+    @_userElement.on( 'click', @_userClickHandler )
     gSession.on( gSession.CHANGE, @_sessionChangeHandler )
     return this
 
@@ -51,8 +62,7 @@ class AppHeaderCtrl
    * @return {undefined}
   ###
   toggleUser: ( show ) ->
-    @_userElement ?= @elem[0].getElementsByClassName( @USER_CLASS )[0]
-    @_userElement.style.display = if show then null else 'none'
+    @_userElement.css( 'display', if show then null else 'none' )
     return
 
   ###*
@@ -60,6 +70,7 @@ class AppHeaderCtrl
    * @return {undefined}
   ###
   destroy: ->
+    @_userElement.off( 'click', @_userClickHandler )
     gSession.removeListener( gSession.CHANGE, @_sessionChangeHandler )
     return
 

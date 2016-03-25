@@ -41,6 +41,10 @@ describe 'syn.ui.<synAppHeader />.ctrl', ->
       gSession.emit gSession.CHANGE, user: -> 'fakeUser2'
       Ctrl::setUser.should.have.been.calledWith 'fakeUser2'
 
+    it 'should listen to user click event', ->
+      stub = @sinon.stub( gSession, 'clear' )
+      @instance._userElement.trigger( 'click' )
+      stub.should.have.been.calledOnce
 
   describe '#setUser', ->
 
@@ -100,7 +104,12 @@ describe 'syn.ui.<synAppHeader />.ctrl', ->
   describe '#destroy', ->
 
     beforeEach ->
+      @sinon.stub( gSession, 'clear' )
       @instance.destroy()
+
 
     it 'should remove events', ->
       gSession.listenerCount( gSession.CHANGE ).should.equal 0
+
+      @instance._userElement.trigger( 'click' )
+      gSession.clear.should.not.have.been.calledOnce

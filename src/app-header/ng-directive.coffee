@@ -11,7 +11,6 @@ appHeaderDirective =
     ctrl = new AppHeaderCtrl( elem )
     require( 'dev-tools' ).angularify( scope, ctrl )
     ctrl.init()
-    scope.$on( '$destroy', -> ctrl.destroy() )
   ]
 
 module.exports = -> appHeaderDirective
