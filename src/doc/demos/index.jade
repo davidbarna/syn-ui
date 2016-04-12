@@ -1,0 +1,61 @@
+html
+  head
+    meta(name='viewport', content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height')
+    link(rel='stylesheet' type='text/css', href='/index.css')
+    style(type="text/css").
+      table { width: 100%; font-size: 1rem; }
+      td { width: 50%; vertical-align: top; }
+      .-pink { color: #ff0066; }
+      .-blue { color: #3399ff; }
+      .-pink > .syn-nav-stacked_label, 
+      .-blue > .syn-nav-stacked_label { font-weight: bold; }
+  body
+    h1 syn-ui
+    h2 syn-app-header
+    div(style="position: relative; height: 90px;")
+      syn-app-header()
+        logo 
+          include ../../imgs/header-logo-example.svg
+    h2 syn-nav-stack
+    p syn-nav-stack instances are generated with 
+      a(href="syn-nav-stack-data.js" target="_blank") this config file
+    table
+      tr
+        td
+          h3 syn-nav-stack(channel="my-nav-channel")
+          ul
+            li Options obtained by inline json object (stringified).
+            li Custom classes are used for Women and Men buttons.
+            li Click events are listened and logged to the console (open it to see logs).
+        td
+          h3 syn-nav-stack(compact options="navStackData")
+          ul
+            li Options obtained from angular scope variable.
+            li Compact layout is activated
+            li The 'phones' button is activated by default (active option).
+      tr
+        td
+          syn-nav-stack#nav-1(channel="my-nav-channel").
+        td
+          syn-nav-stack#nav-2(compact options="navStackData").
+    script(type='text/javascript', src='/index.bundle.js')
+    script(type='text/javascript', src='syn-nav-stack-data.js')
+    script(type='text/javascript').
+      module = syn.ui.angular.getModule()
+      
+      // First demo is instantiated through inline json
+      serialized = JSON.stringify( syn.demos._navStackData )
+      document.getElementById('nav-1').innerHTML = serialized
+      
+      // Second demo is instantiated through angular scope variable
+      module = module.run( function( $rootScope ){
+        syn.demos._navStackData.active = 'phones'
+        $rootScope.navStackData = syn.demos._navStackData
+      })
+      
+      // Module is instantiated
+      angular.bootstrap( document.body, [ module.name ] )
+        
+      // Log os clicks on first menu
+      sub = syn.core.pubsub.channel.factory.create( 'my-nav-channel', [ 'click' ] );
+      sub.click.subscribe( function( item ){ console.log( item ); } )

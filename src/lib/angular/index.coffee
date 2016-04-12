@@ -5,3 +5,4 @@ module.exports =
     angular
       .module( 'syn.ui', [] )
       .directive( 'synAppHeader', require( '../../components/app-header/ng-directive' ) )
+      .directive( 'synNavStack', require( '../../components/nav-stack/ng-directive' ) )
