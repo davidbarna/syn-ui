@@ -30,7 +30,9 @@
     "angular-bsfy": "1.4.8",
     "jade": "1.11.0",
     "jqlite": "0.2.34",
+    "lodash": "4.10.0",
     "stringify": "5.1.0",
-    "syn-auth": "git@github.com:soyundev/syn-auth.git"
+    "syn-auth": "git@github.com:soyundev/syn-auth.git",
+    "syn-core": "git@github.com:soyundev/syn-core.git"
   }
 }
