@@ -15,7 +15,7 @@ $_user-height: 3.1rem;
     left: $spacing;
 
     svg {
-      height: $height - $spacing*2;
+      height: $height - $spacing * 2;
 
       path {
         fill: $_c-contrast;
@@ -24,7 +24,7 @@ $_user-height: 3.1rem;
   }
 
   .syn-app-header_user {
-    margin-top: ( $height - $_user-height ) /2;
+    margin-top: ( $height - $_user-height ) / 2;
     margin-right: $spacing;
   }
 }
@@ -53,7 +53,7 @@ syn-app-header {
       width: $_user-height;
       height: $_user-height;
       margin-top: -.2rem;
-      margin-right: $_spacing/2;
+      margin-right: $_spacing / 2;
       background: #ccc;
       border: 2px solid $_c-contrast;
       border-radius: 100%;
@@ -83,7 +83,7 @@ syn-app-header {
 // Layout for mobile
 @media #{$small-only} {
   syn-app-header {
-    @include syn-app-header-layout( $_height-mobile, $_spacing/2 );
+    @include syn-app-header-layout( $_height-mobile, $_spacing / 2 );
 
     .syn-app-header_user {
       display: none;
