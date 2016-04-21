@@ -79,3 +79,10 @@ $retina: (
 // app-header
 $syn-app-header-height: 7rem !default;
 $syn-app-header-height--small: 4.5rem !default;
+
+// nav-stack
+$syn-nav-stack-spacing: $spacing !default;
+$syn-nav-stack-fz: 1.3rem !default;
+$syn-nav-stack-bg: #22262e !default;
+$syn-nav-stack-color: #fff !default;
+$syn-nav-stack-hover-color: $c-brand !default;

@@ -1,6 +1,6 @@
-describe 'syn.ui.<synAppHeader />.ctrl', ->
+describe 'syn.ui.<syn-app-header />.ctrl', ->
 
-  Ctrl = require( 'src/app-header/ctrl' )
+  Ctrl = require( 'src/components/app-header/ctrl' )
   $ = require( 'jqlite' )
   gSession = require( 'syn-auth' ).session.global
 

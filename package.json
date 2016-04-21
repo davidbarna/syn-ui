@@ -33,6 +33,7 @@
     "angular-bsfy": "1.4.8",
     "jade": "1.11.0",
     "jqlite": "0.2.34",
+    "lodash": "4.10.0",
     "stringify": "5.1.0",
     "syn-auth": "~0",
     "syn-core": "~1"
