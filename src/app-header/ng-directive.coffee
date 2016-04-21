@@ -9,7 +9,7 @@ appHeaderDirective =
 
     AppHeaderCtrl = require( './ctrl' )
     ctrl = new AppHeaderCtrl( elem )
-    require( 'dev-tools' ).angularify( scope, ctrl )
+    require( 'syn-core' ).angularify( scope, ctrl )
     ctrl.init()
   ]
 
