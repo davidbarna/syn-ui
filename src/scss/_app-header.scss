@@ -14,7 +14,7 @@ $_user-height: 3.1rem;
     top: $spacing;
     left: $spacing;
 
-    svg {
+    svg, img {
       height: $height - $spacing * 2;
 
       path {
