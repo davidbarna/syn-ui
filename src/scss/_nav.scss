@@ -41,7 +41,8 @@ $_spacing: $syn-nav-stack-spacing;
     padding: $_spacing * .75 $_spacing;
     border-bottom: 1px solid #555;
     line-height: 1.4rem;
-
+    font-family: Asap, sans-serif;
+    
     &:hover {
       background: rgba( $syn-nav-stack-color, .08 );
     }
