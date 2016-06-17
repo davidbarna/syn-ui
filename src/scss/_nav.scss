@@ -1,7 +1,7 @@
 $_spacing: $syn-nav-stack-spacing;
 
 @mixin syn-nav-stacked-cursor {
-  &:before {
+  &::before {
     display: block;
     position: absolute;
     width: 3px;
@@ -38,17 +38,18 @@ $_spacing: $syn-nav-stack-spacing;
   &_label {
     display: block;
     position: relative;
-    padding: $_spacing*.75 $_spacing;
+    padding: $_spacing * .75 $_spacing;
     border-bottom: 1px solid #555;
     line-height: 1.4rem;
+    font-family: Asap, sans-serif;
 
     &:hover {
       background: rgba( $syn-nav-stack-color, .08 );
     }
 
-    &.-level-1 { padding-left: $_spacing*1.5; }
-    &.-level-2 { padding-left: $_spacing*2; }
-    &.-level-3 { padding-left: $_spacing*2.5; }
+    &.-level-1 { padding-left: $_spacing * 1.5; }
+    &.-level-2 { padding-left: $_spacing * 2; }
+    &.-level-3 { padding-left: $_spacing * 2.5; }
   }
 }
 
@@ -80,8 +81,8 @@ $_spacing: $syn-nav-stack-spacing;
 
       .syn-nav-stacked_label {
         min-width: 45px;
-        padding-left: $_spacing/4;
-        padding-right: $_spacing/4;
+        padding-left: $_spacing / 4;
+        padding-right: $_spacing / 4;
         border-left: 1px solid #555;
         font-size: .8rem;
         text-align: center;

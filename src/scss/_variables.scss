@@ -24,9 +24,9 @@ $xlarge-breakpoint: 1920px !default;
 
 // Here we define the lower and upper bounds for each media size
 $small-range:   ( 0, $small-breakpoint ) !default; // 0, 640px
-$medium-range:  ( $small-breakpoint  + 1px, $medium-breakpoint ) !default; // 641px, 1024px
+$medium-range:  ( $small-breakpoint + 1px, $medium-breakpoint ) !default; // 641px, 1024px
 $large-range:   ( $medium-breakpoint + 1px, $large-breakpoint )  !default; // 1025px, 1440px
-$xlarge-range:  ( $large-breakpoint  + 1px, $xlarge-breakpoint ) !default; // 1441px, 1920px
+$xlarge-range:  ( $large-breakpoint + 1px, $xlarge-breakpoint ) !default; // 1441px, 1920px
 $xxlarge-range: ( $xlarge-breakpoint + 1px, 99999999px ) !default; // 1921px, ...
 
 // Here we define the breakpoints which will become the upper border for each media size.
@@ -38,9 +38,9 @@ $xlarge-breakpoint: 1920px !default;
 
 // Here we define the lower and upper bounds for each media size
 $small-range:   ( 0, $small-breakpoint ) !default; // 0, 640px
-$medium-range:  ( $small-breakpoint  + 1px, $medium-breakpoint ) !default; // 641px, 1024px
+$medium-range:  ( $small-breakpoint + 1px, $medium-breakpoint ) !default; // 641px, 1024px
 $large-range:   ( $medium-breakpoint + 1px, $large-breakpoint )  !default; // 1025px, 1440px
-$xlarge-range:  ( $large-breakpoint  + 1px, $xlarge-breakpoint ) !default; // 1441px, 1920px
+$xlarge-range:  ( $large-breakpoint + 1px, $xlarge-breakpoint ) !default; // 1441px, 1920px
 $xxlarge-range: ( $xlarge-breakpoint + 1px, 99999999px ) !default; // 1921px, ...
 
 // Media Queries
@@ -78,7 +78,7 @@ $retina: (
 
 // app-header
 $syn-app-header-height: 7rem !default;
-$syn-app-header-height--small: 4.5rem!default;
+$syn-app-header-height--small: 4.5rem !default;
 
 // nav-stack
 $syn-nav-stack-spacing: $spacing !default;

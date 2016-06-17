@@ -1,11 +1,15 @@
 {
   "name": "syn-ui",
-  "version": "0.0.0",
+  "version": "0.0.5",
   "description": "User interface elements served as components.",
-  "main": "dest/index.js",
+  "main": "dist/index.js",
+  "files": [
+    "dist",
+    "src/scss"
+  ],
   "scripts": {
     "test": "gulp test",
-    "install": "node_modules/.bin/gulp"
+    "prepublish": "gulp"
   },
   "browserify": {
     "transform": [
@@ -17,14 +21,13 @@
     "url": "git+https://github.com/soyundev/syn-ui.git"
   },
   "author": "David Almeida <davidbarna@gmail.com>",
-  "license": "MIT",
+  "license": "GPL-3.0",
   "bugs": {
     "url": "https://github.com/soyundev/syn-ui/issues"
   },
   "homepage": "https://github.com/soyundev/syn-ui#readme",
   "devDependencies": {
-    "dev-tools": "git://github.com/soyundev/dev-tools.git",
-    "gulp": "3.9.1"
+    "syn-dev-tools": "~0"
   },
   "dependencies": {
     "angular-bsfy": "1.4.8",
@@ -32,7 +35,7 @@
     "jqlite": "0.2.34",
     "lodash": "4.10.0",
     "stringify": "5.1.0",
-    "syn-auth": "git@github.com:soyundev/syn-auth.git",
-    "syn-core": "git@github.com:soyundev/syn-core.git"
+    "syn-auth": "~0",
+    "syn-core": "~1"
   }
 }

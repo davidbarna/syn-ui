@@ -18,7 +18,7 @@ navStackDirective =
 
     NavStack = require( './ctrl' )
     ctrl = new NavStack( elem )
-    require( 'dev-tools' ).angularify( scope, ctrl )
+    require( 'syn-core' ).angularify( scope, ctrl )
     trans( ( clone ) ->
       ctrl.init( getOptions( clone ) )
     )
