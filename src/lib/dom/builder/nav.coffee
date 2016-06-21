@@ -232,6 +232,7 @@ class DomBuilderNav extends EventEmitter
   ###
   destroyElement: ( conf ) ->
     elem = conf.element
+    conf.populated = false
     $( elem ).remove()
     delete conf.element
     for evt, funcs of conf.on
