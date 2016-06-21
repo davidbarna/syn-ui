@@ -1,0 +1,52 @@
+$app-svg-logo-icon-width: 71px !default;
+$app-svg-logo-icon-padding: 23px !default;
+$app-svg-logo-name-width: 168px !default;
+$app-svg-logo-width: $app-svg-logo-icon-width + $app-svg-logo-icon-padding + $app-svg-logo-name-width;
+
+.app-svg-logo {
+
+  #logo-icon-circle, #logo-icon-symbol, #logo-icon-bg, #logo-name {
+    @include transform-origin( 50% 50% );
+  }
+
+  #logo-icon-bg, #logo-name {
+    path {
+      fill: $c-brand;
+    }
+  }
+}
+
+.app-svg-logo--white {
+
+  #logo-name, #logo-icon-circle, #logo-icon-symbol {
+
+    path {
+      fill: #fff;
+    }
+  }
+}
+
+.app-svg-logo--no-icon {
+  overflow: hidden;
+
+  #logo-icon {
+    @include transform( scale3d( 0, 0, 0 ) );
+  }
+
+  #logo-name {
+    $name-position: -( $app-svg-logo-icon-width + $app-svg-logo-icon-padding );
+    @include transform( translate3d( $name-position, 0, 0 ) );
+  }
+}
+
+.app-svg-logo--no-name {
+
+  #logo-name {
+    @include transform( scale3d( 0, 0, 0 ) );
+  }
+
+  #logo-icon {
+    $icon-position: $app-svg-logo-width / 2 - $app-svg-logo-icon-width / 2;
+    @include transform( translate3d( $icon-position, 0, 0 ) );
+  }
+}

@@ -8,14 +8,16 @@ $_user-height: 3.1rem;
 
 // Sets all sizes and spacings of the component
 @mixin syn-app-header-layout( $height, $spacing ) {
+  $logo-spacing: $spacing / 2;
+
   height: $height;
 
   logo {
-    top: $spacing;
-    left: $spacing;
+    top: $logo-spacing;
+    left: $logo-spacing * 2;
 
     svg, img {
-      height: $height - $spacing * 2;
+      height: $height - $logo-spacing * 2;
 
       path {
         fill: $_c-contrast;
