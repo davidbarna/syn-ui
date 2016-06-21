@@ -158,6 +158,7 @@ describe 'syn.ui.dom.builder.Nav', ->
       instance.configs.should.deep.equal {}
 
     it 'should remove all listeners', ->
+      config.nav.button2.populated.should.equal false
       config.nav.button2.on.click[0].reset()
       config.nav.button2.on.keypress[0].reset()
       $( button2Element ).trigger( 'click' ).trigger( 'keypress' )

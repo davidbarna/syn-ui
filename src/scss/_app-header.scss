@@ -8,14 +8,16 @@ $_user-height: 3.1rem;
 
 // Sets all sizes and spacings of the component
 @mixin syn-app-header-layout( $height, $spacing ) {
+  $logo-spacing: $spacing / 2;
+
   height: $height;
 
   logo {
-    top: $spacing;
-    left: $spacing;
+    top: $logo-spacing;
+    left: $logo-spacing * 2;
 
     svg, img {
-      height: $height - $spacing * 2;
+      height: $height - $logo-spacing * 2;
 
       path {
         fill: $_c-contrast;
@@ -45,7 +47,12 @@ syn-app-header {
   .syn-app-header_user {
     @include clearfix;
     display: block;
-    float: right;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+    padding: 1rem;
+    border: 1px #fff solid;
+    border-radius: 3px;
     font-size: 1.2rem;
 
     &_img {
@@ -69,13 +76,13 @@ syn-app-header {
       font-size: 130%;
       line-height: 1.3;
       font-weight: 700;
-      color: darken( $_c-bg, 30% );
+      color: #fff;
     }
 
     &_subtitle {
       white-space: nowrap;
       line-height: 1;
-      color: darken( $_c-bg, 20% );
+      color: #fff;
     }
   }
 }
@@ -84,9 +91,5 @@ syn-app-header {
 @media #{$small-only} {
   syn-app-header {
     @include syn-app-header-layout( $_height-mobile, $_spacing / 2 );
-
-    .syn-app-header_user {
-      display: none;
-    }
   }
 }
