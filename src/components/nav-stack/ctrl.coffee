@@ -1,5 +1,6 @@
 DomBuilderNav = require( '../../lib/dom/builder/nav' )
 core = require( 'syn-core' )
+$ = require('jqlite')
 
 ###
  * # NavStackCtrl
@@ -50,7 +51,7 @@ class NavStackCtrl
       .setCssPrefix( @CLASS )
       .on( @nav.CLICK, @_clickHandler )
       .build( config )
-    @nav.element.classList.add( @COMPACT_CLASS ) if @isCompact
+    $(@nav.element).addClass( @COMPACT_CLASS ) if @isCompact
     @element.addClass( @CLASS )
     @element.append( @nav.element )
     return this
@@ -64,7 +65,7 @@ class NavStackCtrl
   setActive: ( item ) ->
     @active.classList.remove( @ACTIVE_CLASS ) if !!@active
     @active = item.element
-    @active.classList.add( @ACTIVE_CLASS )
+    $(@active).addClass( @ACTIVE_CLASS )
     return this
 
 
