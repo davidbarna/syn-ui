@@ -1,10 +1,13 @@
 html
   head
+    meta(http-equiv="X-UA-Compatible" content="IE=edge")
     meta(name='viewport', content='user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height')
     link(rel='stylesheet' type='text/css', href='/index.css')
     style(type="text/css").
       table { width: 100%; font-size: 1rem; }
       td { width: 50%; vertical-align: top; }
+      h2 { margin-top: 50px; }
+      .demo-button { background: #ccc; padding: 10px; margin-right: 20px; } 
       .-pink { color: #ff0066; }
       .-blue { color: #3399ff; }
       .-pink > .syn-nav-stacked_label, 
@@ -16,6 +19,37 @@ html
       syn-app-header()
         logo 
           include ../imgs/header-logo-example.svg
+    h2 syn-tooltip
+    h3 Hover tooltips
+    span.demo-button(
+      syn-tooltip-target="tooltip-id"
+    ) Hover me
+    span.demo-button(
+      syn-tooltip-target="tooltip-id"
+    )  Hover me
+    span.demo-button(
+      syn-tooltip-target="tooltip-id"
+    )  Hover me too
+    h3 Click tooltips
+    span.demo-button(
+      syn-tooltip-target="tooltip-id"
+      syn-tooltip-action="click"
+    ) Jenny
+      syn-tooltip-content I'm a girl
+    span.demo-button(
+      syn-tooltip-target="tooltip-id"
+      syn-tooltip-action="click"
+    ) Mark
+      syn-tooltip-content I'm a boy
+    span.demo-button(
+      syn-tooltip-target="tooltip-id"
+      syn-tooltip-action="click"
+    ) Claude
+      syn-tooltip-content You won't now
+    span(
+      syn-tooltip="tooltip-id"
+      style="background: #333; color: #fff;padding: 40px;"
+    ) TOOLTIP CONTENT
     h2 syn-nav-stack
     p syn-nav-stack instances are generated with 
       a(href="syn-nav-stack-data.js" target="_blank") this config file
