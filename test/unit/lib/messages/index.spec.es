@@ -1,3 +1,4 @@
+import Promise from 'bluebird'
 import UiMessages from 'src/lib/messages'
 
 describe('messages', function () {

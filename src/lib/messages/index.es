@@ -1,3 +1,4 @@
+import Promise from 'bluebird'
 import core from 'syn-core'
 import swal from 'sweetalert'
 

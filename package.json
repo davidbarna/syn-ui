@@ -27,10 +27,12 @@
   },
   "homepage": "https://github.com/soyundev/syn-ui#readme",
   "devDependencies": {
+    "bluebird": "3.4.6",
+    "gulp": "3.9.1",
     "syn-dev-tools": "~0"
   },
   "dependencies": {
-    "angular-bsfy": "1.4.8",
+    "angular": "1.5.8",
     "jade": "1.11.0",
     "jqlite": "0.2.34",
     "lodash": "4.10.0",
