@@ -29,6 +29,7 @@
   "devDependencies": {
     "bluebird": "3.4.6",
     "gulp": "3.9.1",
+    "gulp-insert": "0.5.0",
     "syn-dev-tools": "~0"
   },
   "dependencies": {
