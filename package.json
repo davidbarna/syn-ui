@@ -1,6 +1,6 @@
 {
   "name": "syn-ui",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "description": "User interface elements served as components.",
   "main": "dist/index.js",
   "files": [
