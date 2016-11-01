@@ -9,7 +9,8 @@
   ],
   "scripts": {
     "test": "gulp test",
-    "prepublish": "gulp vendor-scss-copy; gulp"
+    "prepublish": "gulp vendor-scss-copy; gulp",
+    "postinstall": "gulp vendor-scss-copy"
   },
   "browserify": {
     "transform": [
