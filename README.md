@@ -21,6 +21,25 @@ $ gulp serve
 http://localhost:3000/doc/demos/
 ```
 
+## Splash screen service
+
+You can use syn-ui app loaded. It animates the logo and loads all files asynchronously.
+
+Just paste this snippet in your html page and modify whatever you need.
+
+```jade
+#splash-screen-content.splash-screen
+  .app-svg-logo.app-svg-logo--no-name.app-svg-logo--white
+    include ../path/to/svg-logo.svg
+    include ../../node_modules/syn-ui/splash-screen/template.jade
+script(type='text/javascript').
+  syn.ui.splashScreen({
+    files: { css: ['styles.css'], js: ['cordova.js', 'js/app.js'] }
+  })
+  .then(function(){
+    angular.bootstrap( document.body, [ 'MyApp' ] );
+  })
+```
 
 ## Components
 

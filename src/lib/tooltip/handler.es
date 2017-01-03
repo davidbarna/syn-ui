@@ -25,7 +25,7 @@ class TooltipHandler {
    */
   static register (id, tooltip) {
     if (tooltips[id]) {
-      throw new Error(`Tooltip already registered with id "${id}"`)
+      console.warn(`Tooltip already registered with id "${id}"`)
     } else {
       tooltips[id] = tooltip
     }
