@@ -1,0 +1,77 @@
+.app-svg-logo #logo-icon-circle, .app-svg-logo #logo-icon-symbol, .app-svg-logo #logo-icon-bg, .app-svg-logo #logo-name {
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  transform-origin: 50% 50%; }
+
+.app-svg-logo #logo-icon-bg path, .app-svg-logo #logo-name path {
+  fill: #f1820f; }
+
+.app-svg-logo--white #logo-name path, .app-svg-logo--white #logo-icon-circle path, .app-svg-logo--white #logo-icon-symbol path {
+  fill: #fff !important; }
+
+.app-svg-logo--no-icon {
+  overflow: hidden; }
+  .app-svg-logo--no-icon #logo-icon {
+    transform: scale3d(0, 0, 0);
+    -webkit-transform: scale3d(0, 0, 0);
+    -moz-transform: scale3d(0, 0, 0); }
+  .app-svg-logo--no-icon #logo-name {
+    transform: translate3d(-94px, 0, 0);
+    -webkit-transform: translate3d(-94px, 0, 0);
+    -moz-transform: translate3d(-94px, 0, 0); }
+
+.app-svg-logo--no-name #logo-name {
+  transform: scale3d(0, 0, 0);
+  -webkit-transform: scale3d(0, 0, 0);
+  -moz-transform: scale3d(0, 0, 0); }
+
+.app-svg-logo--no-name #logo-icon {
+  transform: translate3d(95.5px, 0, 0);
+  -webkit-transform: translate3d(95.5px, 0, 0);
+  -moz-transform: translate3d(95.5px, 0, 0); }
+
+.splash-screen, .splash-screen-bg, .app-svg-logo svg {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  -webkit-transform-origin: 50% 50%;
+  -moz-transform-origin: 50% 50%;
+  transform-origin: 50% 50%; }
+
+.splash-screen {
+  overflow: hidden;
+  z-index: 1000;
+  pointer-events: none;
+  background: #f1820f; }
+  .splash-screen .app-svg-logo svg {
+    overflow: visible;
+    max-height: 18%;
+    margin: auto; }
+  .splash-screen .app-svg-logo #logo-icon-bg {
+    transform: scale3d(30, 30, 30);
+    -webkit-transform: scale3d(30, 30, 30);
+    -moz-transform: scale3d(30, 30, 30); }
+  .splash-screen .app-svg-logo #logo-icon-circle {
+    -webkit-animation: rotate 2s linear infinite;
+    -moz-animation: rotate 2s linear infinite;
+    animation: rotate 2s linear infinite; }
+
+@-webkit-keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg); } }
+
+@-moz-keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg); } }
+
+@keyframes rotate {
+  100% {
+    transform: rotate(360deg);
+    -webkit-transform: rotate(360deg);
+    -moz-transform: rotate(360deg); } }

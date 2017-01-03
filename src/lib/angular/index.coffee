@@ -1,4 +1,4 @@
-angular = require( 'angular-bsfy' )
+angular = require( 'angular' )
 synTooltip = require( '../../components/tooltip/ng-directive' ).default
 synTooltipTarget = require( '../../components/tooltip-target/ng-directive' ).default
 

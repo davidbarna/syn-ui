@@ -1,4 +1,4 @@
-import { element } from 'angular-bsfy'
+import { element } from 'angular'
 import TooltipHandler from '../../lib/tooltip/handler'
 import TooltipPositioner from '../../lib/tooltip/positioner'
 

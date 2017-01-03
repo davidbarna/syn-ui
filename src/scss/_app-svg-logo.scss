@@ -6,7 +6,7 @@ $app-svg-logo-width: $app-svg-logo-icon-width + $app-svg-logo-icon-padding + $ap
 .app-svg-logo {
 
   #logo-icon-circle, #logo-icon-symbol, #logo-icon-bg, #logo-name {
-    @include transform-origin( 50% 50% );
+    transform-origin: 50% 50%;
   }
 
   #logo-icon-bg, #logo-name {
