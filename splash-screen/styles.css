@@ -3,23 +3,6 @@
   -moz-transform-origin: 50% 50%;
   transform-origin: 50% 50%; }
 
-.app-svg-logo #logo-icon-bg path, .app-svg-logo #logo-name path {
-  fill: #f1820f; }
-
-.app-svg-logo--white #logo-name path, .app-svg-logo--white #logo-icon-circle path, .app-svg-logo--white #logo-icon-symbol path {
-  fill: #fff !important; }
-
-.app-svg-logo--no-icon {
-  overflow: hidden; }
-  .app-svg-logo--no-icon #logo-icon {
-    transform: scale3d(0, 0, 0);
-    -webkit-transform: scale3d(0, 0, 0);
-    -moz-transform: scale3d(0, 0, 0); }
-  .app-svg-logo--no-icon #logo-name {
-    transform: translate3d(-94px, 0, 0);
-    -webkit-transform: translate3d(-94px, 0, 0);
-    -moz-transform: translate3d(-94px, 0, 0); }
-
 .app-svg-logo--no-name #logo-name {
   transform: scale3d(0, 0, 0);
   -webkit-transform: scale3d(0, 0, 0);
@@ -43,8 +26,7 @@
 .splash-screen {
   overflow: hidden;
   z-index: 1000;
-  pointer-events: none;
-  background: #f1820f; }
+  pointer-events: none; }
   .splash-screen .app-svg-logo svg {
     overflow: visible;
     max-height: 18%;
@@ -57,6 +39,11 @@
     -webkit-animation: rotate 2s linear infinite;
     -moz-animation: rotate 2s linear infinite;
     animation: rotate 2s linear infinite; }
+
+.-loaded .splash-screen .app-svg-logo #logo-icon-circle {
+  -webkit-animation: rotate .4s linear infinite;
+  -moz-animation: rotate .4s linear infinite;
+  animation: rotate .4s linear infinite; }
 
 @-webkit-keyframes rotate {
   100% {
